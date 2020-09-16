@@ -104,6 +104,10 @@ function createPortForwarder(local_host, local_port, remote_host, remote_port, b
       //realCon.write(buf);
       //return;
 
+      // A. Fenyo : substitution du user-agent par une valeur prédéfinie
+      buf = new Buffer(buf.toString().replace(/User-Agent: .*/m, 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0'));
+      console.log("----------------------\nREQUETE :\n" + buf.toString() + "---------------\n");
+
       var buf_ary = [], unsavedStart = 0, buf_len = buf.length;
 
       for (var i = 0; i < buf_len; i++) {
