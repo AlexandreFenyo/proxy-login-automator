@@ -1,3 +1,9 @@
+# Version modifiée par A. Fenyo
+
+Le User-Agent est substitué par une version classique de Firefox, afin de passer les proxy qui ont des critères de filtrage selon la valeur de cette entête.
+
+-----------------------------------------------------------------------------------------------
+
 # proxy-login-automator
 A single node.js script to automatically inject user/password to http proxy server via a local forwarder
 
